@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d8997ad8.css",
+    "main.js": "/static/js/main.7e4d4cb2.js",
+    "static/media/gandhijiImage.png": "/static/media/gandhijiImage.1f9b4f77a7501b47fbf7.png",
+    "static/media/ai.png": "/static/media/ai.b70443f3850e74a8a810.png",
+    "static/media/dataset-img.png": "/static/media/dataset-img.727e7cc159e52fbd511e.png",
+    "index.html": "/index.html",
+    "main.d8997ad8.css.map": "/static/css/main.d8997ad8.css.map",
+    "main.7e4d4cb2.js.map": "/static/js/main.7e4d4cb2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8997ad8.css",
+    "static/js/main.7e4d4cb2.js"
+  ]
+}

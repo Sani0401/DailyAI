@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+.main__Container{
+    display: flex;
+    flex: 1;
+   
+    width: 70vw;
+    overflow-y: scroll;
+   
+}
+
+
+.questionInput{
+    width: 65vw;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: 'DM Sans', sans-serif;
+    border: 1.5px solid #E5E1DA;
+}
+
+.imageIcon{
+    height: 50px;
+    width: 50px;
+}
+
+.imageQuestions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.introWords{
+position: relative;
+top: 10px;
+font-family: 'DM Sans', sans-serif;
+font-size: 20px;
+color: #11009E;
+font-weight: 500;
+}
+
+
+.answer{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+}
+
+.questionAnswers{
+    display: flex;
+    flex-direction: column;
+ margin: 0 20px 20px 20px;
+   
+}
+
+.finalDiv{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
