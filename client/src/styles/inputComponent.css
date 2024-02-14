@@ -49,7 +49,7 @@ font-weight: 500;
 .questionAnswers{
     display: flex;
     flex-direction: column;
- margin: 0 20px 20px 20px;
+ margin: 20px;
    
 }
 
@@ -57,4 +57,21 @@ font-weight: 500;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+}
+
+.right-arrow{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+justify-content: center;
+align-items: center;
 }

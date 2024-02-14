@@ -3,6 +3,8 @@ import "../styles/inputComponent.css";
 import imageIcon from "../Images/gandhijiImage.png";
 import Instance from "../config/axiosInstance";
 import apiUrl from "../config/apiURL";
+import { Button } from "react-bootstrap";
+import arrowIcon from "../Images/right-arrow.png";
 
 function InputComponent() {
   const [query, setQuery] = useState("");
@@ -34,7 +36,10 @@ function InputComponent() {
       updatedLoading[questionIndex] = false;
       return updatedLoading;
     });
- 
+
+    // Scroll to the input component when answer is retrieved
+    const inputComponent = document.querySelector(".questionInput");
+    inputComponent.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -44,7 +49,7 @@ function InputComponent() {
           {questions.map((question, index) => (
             <div key={index} className="finalDiv">
               <label className="imageQuestions">
-                <img src={imageIcon} className="imageIcon" alt="Gandhiji" />
+                <img src="https://static.vecteezy.com/system/resources/previews/024/183/538/original/male-avatar-portrait-of-a-business-man-in-a-suit-illustration-of-male-character-in-modern-color-style-vector.jpg" className="imageIcon" alt="Gandhiji" />
                 <p className="introWords">{question}</p>
               </label>
               {loadingAnswers[index] && <p>Loading...</p>}
@@ -53,21 +58,32 @@ function InputComponent() {
           ))}
         </div>
       </div>
-
-      <input
-        placeholder="Ask questions here?"
-        className="questionInput"
-        value={query}
-        onChange={(e) => {
-          setQuery(e.target.value);
-        }}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            handleQuery();
-            setQuery("");
-          }
-        }}
-      />
+      <label className="inputContainer">
+        {" "}
+        <input
+          placeholder="Ask questions here?"
+          className="questionInput"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleQuery();
+              setQuery("");
+            }
+          }}
+        />
+        <img
+          src={arrowIcon}
+          className="right-arrow"
+          onClick={() => {
+            setQuery(""); // Clear the query input
+            handleQuery(); // Call the handleQuery function
+          }}
+          alt="loading"
+        />
+      </label>
     </>
   );
 }

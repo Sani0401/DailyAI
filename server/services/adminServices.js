@@ -3,12 +3,14 @@ import { OpenAI } from "openai";
 import { Document } from "langchain/document";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { createClient } from "@supabase/supabase-js";
-
+import dotenv from 'dotenv'
+dotenv.config();
 const openAi = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.OPEN_AI_KEY,
 });
-const supabaseUrl = 'https://xvyuhmoyjeezlxmuwxec.supabase.co'
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh2eXVobW95amVlemx4bXV3eGVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc1OTYxODUsImV4cCI6MjAyMzE3MjE4NX0.CJWm8qoFbGAkonnUupDlj-F3JbVcwT6tw2Sm5XNz8eo"
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_KEY 
+
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 async function addData(data) {

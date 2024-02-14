@@ -55,6 +55,7 @@ function AdminLogin() {
           />
           <input
             placeholder="Password"
+          
             onChange={(e) => {
               setPassword(e.target.value);
             }}
