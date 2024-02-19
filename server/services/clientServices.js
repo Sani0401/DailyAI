@@ -11,7 +11,7 @@ dotenv.config();
 
 
 const openAi = new OpenAI({
-  
+openAIApiKey:"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"
 })
 const embeddings = new OpenAIEmbeddings();
 const supabaseUrl = "https://xvyuhmoyjeezlxmuwxec.supabase.co";
